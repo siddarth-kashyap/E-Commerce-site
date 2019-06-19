@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block content %}
+{% load static %}
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<meta name="viewport" content="width=device-width initial-scale=1">
+	<title> Contact us</title>
+</head>
+<body>
+        <form action ="" method ="post">
+          <fieldset>
+            <legend> Enter your details -- </legend>
+            {% csrf_token %}
+            {{form.as_p}}
+              <input type = "submit" value = "Submit" name="sub">
+          </fieldset>
+        </form>
+</body>
+</html>
+{% endblock %}
